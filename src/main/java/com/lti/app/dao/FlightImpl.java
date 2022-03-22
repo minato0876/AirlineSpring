@@ -34,12 +34,12 @@ public class FlightImpl implements FlightDAO {
 
 
 	@Override
-	public List<Flight> searchFlight(String fromdept, String toarrive, String depart,
+	public List<Flight> searchFlight(String fromDept, String toArrive, String depart,
 			String arrival) {
 		// TODO Auto-generated method stub
-		Query qry2=eMan.createQuery("from Flight v where v.fromdept=?1 and v.toarrive=?2 and v.depart=?3 and v.arrival=?4");
-		qry2.setParameter(1,fromdept);
-		qry2.setParameter(2,toarrive);
+		Query qry2=eMan.createQuery("from Flight v where v.fromDept=?1 and v.toArrive=?2 and v.depart=?3 and v.arrival=?4");
+		qry2.setParameter(1,fromDept);
+		qry2.setParameter(2,toArrive);
 		qry2.setParameter(3,depart);
 		qry2.setParameter(4,arrival);
 		

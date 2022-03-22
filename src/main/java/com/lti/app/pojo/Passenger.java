@@ -2,6 +2,8 @@ package com.lti.app.pojo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -9,48 +11,56 @@ import javax.persistence.Table;
 @Table(name="registration99")
 public class Passenger {
 	
-	
-	@Column(name="title")
-	private String title;
-	@Column(name="firstname")
-	private String firstname;
-	@Column(name="lastname")
-	private String lastname;
-	
 	@Id
+	@Column(name="passengerId")
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long passengerId;
+	@Column(name="title")
+	private String title; 
+	@Column(name="firstname")
+	private String firstName;
+	@Column(name="lastname")
+	private String lastName;
+	
 	@Column(name="username")
-	private String username;
+	private String userName;
 	@Column(name="password")
 	private String password;
 	@Column(name="cpassword")
-	private String cpassword;
+	private String cPassword;
 	@Column(name="dob")
 	private String dob;
 	@Column(name="phoneno")
-	private long phoneno;
+	private long phoneNo;
+	public long getPassengerId() {
+		return passengerId;
+	}
+	public void setPassengerId(long passengerId) {
+		this.passengerId = passengerId;
+	}
 	public String getTitle() {
 		return title;
 	}
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public String getFirstname() {
-		return firstname;
+	public String getFirstName() {
+		return firstName;
 	}
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
-	public String getLastname() {
-		return lastname;
+	public String getLastName() {
+		return lastName;
 	}
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
-	public String getUsername() {
-		return username;
+	public String getUserName() {
+		return userName;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 	public String getPassword() {
 		return password;
@@ -58,11 +68,11 @@ public class Passenger {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getCpassword() {
-		return cpassword;
+	public String getcPassword() {
+		return cPassword;
 	}
-	public void setCpassword(String cpassword) {
-		this.cpassword = cpassword;
+	public void setcPassword(String cPassword) {
+		this.cPassword = cPassword;
 	}
 	public String getDob() {
 		return dob;
@@ -70,34 +80,38 @@ public class Passenger {
 	public void setDob(String dob) {
 		this.dob = dob;
 	}
-	public long getPhoneno() {
-		return phoneno;
+	public long getPhoneNo() {
+		return phoneNo;
 	}
-	public void setPhoneno(long phoneno) {
-		this.phoneno = phoneno;
+	public void setPhoneNo(long phoneNo) {
+		this.phoneNo = phoneNo;
 	}
 	@Override
 	public String toString() {
-		return "Passenger [title=" + title + ", firstname=" + firstname + ", lastname=" + lastname + ", username="
-				+ username + ", password=" + password + ", cpassword=" + cpassword + ", dob=" + dob + ", phoneno="
-				+ phoneno + "]";
+		return "Passenger [passengerId=" + passengerId + ", title=" + title + ", firstName=" + firstName + ", lastName="
+				+ lastName + ", userName=" + userName + ", password=" + password + ", cPassword=" + cPassword + ", dob="
+				+ dob + ", phoneNo=" + phoneNo + "]";
 	}
-	public Passenger(String title, String firstname, String lastname, String username, String password,
-			String cpassword, String dob, long phoneno) {
+	public Passenger(long passengerId, String title, String firstName, String lastName, String userName,
+			String password, String cPassword, String dob, long phoneNo) {
 		super();
+		this.passengerId = passengerId;
 		this.title = title;
-		this.firstname = firstname;
-		this.lastname = lastname;
-		this.username = username;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.userName = userName;
 		this.password = password;
-		this.cpassword = cpassword;
+		this.cPassword = cPassword;
 		this.dob = dob;
-		this.phoneno = phoneno;
+		this.phoneNo = phoneNo;
 	}
 	public Passenger() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	
+	
 	
 	
 	

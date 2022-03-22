@@ -36,10 +36,10 @@ public class FlightController {
 		return vService.addFlightSelect(flight);
 	}
 	
-	@GetMapping("/flightselect/{fromdept}/{toarrive}/{depart}/{arrival}")
-	public List<Flight> searchFlight(@PathVariable("fromdept") String fromdept,@PathVariable("toarrive") String toarrive,@PathVariable("depart") String depart,@PathVariable("arrival") String arrival)
+	@GetMapping("/flightselect/{fromDept}/{toArrive}/{depart}/{arrival}")
+	public List<Flight> searchFlight(@PathVariable("fromDept") String fromDept,@PathVariable("toArrive") String toArrive,@PathVariable("depart") String depart,@PathVariable("arrival") String arrival)
 	{
-		return vService.searchFlight(fromdept, toarrive, depart, arrival);
+		return vService.searchFlight(fromDept, toArrive, depart, arrival);
 	}
 	
 }

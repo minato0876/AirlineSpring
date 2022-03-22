@@ -30,9 +30,9 @@ public class FlightServiceImpl implements FlightService {
 	}
 
 	@Override
-	public List<Flight> searchFlight(String fromdept, String toarrive, String depart, String arrival) {
+	public List<Flight> searchFlight(String fromDept, String toArrive, String depart, String arrival) {
 		// TODO Auto-generated method stub
-		return vdao.searchFlight(fromdept, toarrive, depart, arrival);
+		return vdao.searchFlight(fromDept, toArrive, depart, arrival);
 	}
 
 	

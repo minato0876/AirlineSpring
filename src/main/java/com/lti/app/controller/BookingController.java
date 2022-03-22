@@ -10,26 +10,26 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.lti.app.pojo.CustomerDetails;
-import com.lti.app.service.CustomerDetailsService;
+import com.lti.app.pojo.Booking;
+import com.lti.app.service.BookingService;
 import com.lti.app.service.FlightService;
 
 @RestController
 @RequestMapping("/rest/api")
 @CrossOrigin("http://localhost:4200")
-public class CustomerDetailsController {
+public class BookingController {
 	
 	@Autowired
-	CustomerDetailsService vService;
+	BookingService vService;
 	
 	@GetMapping("/booking")
-	public List<CustomerDetails> getBooking()
+	public List<Booking> getBooking()
 	{
 		return vService.getBooking();
 	}
 
 	@PostMapping("/booking")
-	public boolean addBooking(@RequestBody CustomerDetails booking)
+	public boolean addBooking(@RequestBody Booking booking)
 	{
 		System.out.println(booking);
 		return vService.addBooking(booking);

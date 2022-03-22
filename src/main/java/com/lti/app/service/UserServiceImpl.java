@@ -36,16 +36,17 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public boolean validateLogin(String username, String password) {
+	public boolean validateLogin(String userName, String password) {
 		// TODO Auto-generated method stub
-		return vdao.validateLogin(username, password);
+		System.out.println(userName);
+		return vdao.validateLogin(userName, password);
 		
 	}
 
 	@Override
-	public boolean validateAdmin(String title, String username, String password) {
+	public boolean validateAdmin(String title, String userName, String password) {
 		// TODO Auto-generated method stub
-		return vdao.validateAdmin(title, username, password);
+		return vdao.validateAdmin(title, userName, password);
 	}
 	
 	

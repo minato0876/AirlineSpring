@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.lti.app.pojo.Admin;
-import com.lti.app.pojo.CustomerDetails;
+import com.lti.app.pojo.Booking;
 import com.lti.app.service.AdminService;
 
 @RestController

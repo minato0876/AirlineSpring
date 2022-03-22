@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="allflight01")
+@Table(name="allflight99")
 public class Admin {
 	
 	@Id

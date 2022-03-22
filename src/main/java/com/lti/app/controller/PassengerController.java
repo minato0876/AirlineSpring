@@ -24,6 +24,7 @@ public class PassengerController {
 	@PostMapping("/passenger")
 	public boolean addUser(@RequestBody Passenger passenger)
 	{
+		System.out.println(passenger);
 		return vService.addUser(passenger);
 	}
 	
