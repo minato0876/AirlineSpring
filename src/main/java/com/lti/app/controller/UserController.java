@@ -35,20 +35,21 @@ public class UserController {
 	}
 	
 	
-	@GetMapping("/user/{userName}/{password}")
+	@GetMapping("/user/{title}/{userName}/{password}")
 	
-	public boolean validateLogin(@PathVariable("userName") String userName,@PathVariable("password") String password)
+	public boolean validateLogin(@PathVariable("title")String title,@PathVariable("userName") String userName,@PathVariable("password") String password)
 	{
-		System.out.println(userName);
-		return vService.validateLogin(userName, password);
+		//System.out.println(userName);
+		System.out.println(title);
+		return vService.validateLogin(title,userName, password);
 		
 	}
 	
-	@GetMapping("/user/{title}/{userName}/{password}")
-	public boolean validateAdmin(@PathVariable("title") String title,@PathVariable("userName") String userName,@PathVariable("password") String password)
-	{
-		return vService.validateAdmin(title, userName, password);
-	}
+//	@GetMapping("/user/{title}/{userName}/{password}")
+//	public boolean validateAdmin(@PathVariable("title") String title,@PathVariable("userName") String userName,@PathVariable("password") String password)
+//	{
+//		return vService.validateAdmin(title, userName, password);
+//	}
 	
 	
 }

@@ -9,11 +9,20 @@ import javax.persistence.Table;
 @Table(name="registration99")
 public class User {
 
+	@Column(name="title")
+	private String title;
+	
 	@Id
 	@Column(name="username")
 	private String userName;
 	@Column(name="password")
 	private String password;
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
 	public String getUserName() {
 		return userName;
 	}
@@ -28,10 +37,11 @@ public class User {
 	}
 	@Override
 	public String toString() {
-		return "User [userName=" + userName + ", password=" + password + "]";
+		return "User [title=" + title + ", userName=" + userName + ", password=" + password + "]";
 	}
-	public User(String userName, String password) {
+	public User(String title, String userName, String password) {
 		super();
+		this.title = title;
 		this.userName = userName;
 		this.password = password;
 	}

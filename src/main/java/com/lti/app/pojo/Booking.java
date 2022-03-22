@@ -10,7 +10,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="bookflight99")
 public class Booking {
-	
+	//ManyToOne using PassengerId
 	@Id
 	@Column(name="pnrno")
 	@GeneratedValue(strategy = GenerationType.AUTO)

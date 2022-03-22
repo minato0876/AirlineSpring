@@ -36,10 +36,11 @@ public class AdminController {
 		return vService.addFlight(admin);
 	}
 
-	@DeleteMapping("/addFlight/{flightno}")
-	public boolean deleteVehicle(@PathVariable("flightno") String flightno)
+	@DeleteMapping("/addFlight/{flightNo}")
+	public boolean deleteFlight(@PathVariable("flightNo") String flightNo)
 	
 	{
-		return vService.deleteVehicle(flightno);
+		System.out.println(flightNo);
+		return vService.deleteFlight(flightNo);
 	}
 }

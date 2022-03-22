@@ -12,5 +12,5 @@ public interface AdminDAO {
 	public boolean addFlight(Admin admin);
 	public List<Admin> getFlight();
 	
-	public boolean deleteVehicle(String flightno);
+	public boolean deleteFlight(String flightNo);
 }

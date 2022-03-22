@@ -1,6 +1,7 @@
 package com.lti.app.dao;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.*;
 
@@ -17,10 +18,13 @@ public class FlightImpl implements FlightDAO {
 	@Autowired
 	EntityManager eMan;
 	
+	List<Flight> list=new ArrayList<>();
+
 	@Override
 	public List<Flight> getFlightSelect() {
 		
-		return eMan.createQuery("from Flight").getResultList() ;
+		//return eMan.createQuery("from Flight").getResultList() ;
+		return list;
 	}
 
 	@Override
@@ -43,8 +47,9 @@ public class FlightImpl implements FlightDAO {
 		qry2.setParameter(3,depart);
 		qry2.setParameter(4,arrival);
 		
-		List<Flight> res=qry2.getResultList();
-		return res;
+		//List<Flight> res=qry2.getResultList();
+		list=(ArrayList<Flight>) qry2.getResultList();
+		return list;
 	}
 	
 	

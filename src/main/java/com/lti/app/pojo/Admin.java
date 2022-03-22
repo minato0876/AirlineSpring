@@ -13,48 +13,48 @@ public class Admin {
 	
 	@Id
 	@Column(name="flightno")
-	private String flightno;
+	private String flightNo;
 	@Column(name="flightname")
-	private String flightname;
+	private String flightName;
 	@Column(name="fromdept")
-	private String fromdept;
+	private String fromDept;
 	@Column(name="toarrive")
-	private String toarrive;
+	private String toArrive;
 	@Column(name="depart")
 	private String depart;
 	@Column(name="arrival")
 	private String arrival;
 	@Column(name="flightecoprice")
-	private String flightecoprice;
+	private String flightEcoPrice;
 	@Column(name="flightbusprice")
-	private String flightbusprice ;
+	private String flightBusPrice ;
 	@Column(name="duration")
 	private String duration;
 	@Column(name="cabin")
 	private String cabin;
-	public String getFlightno() {
-		return flightno;
+	public String getFlightNo() {
+		return flightNo;
 	}
-	public void setFlightno(String flightno) {
-		this.flightno = flightno;
+	public void setFlightNo(String flightNo) {
+		this.flightNo = flightNo;
 	}
-	public String getFlightname() {
-		return flightname;
+	public String getFlightName() {
+		return flightName;
 	}
-	public void setFlightname(String flightname) {
-		this.flightname = flightname;
+	public void setFlightName(String flightName) {
+		this.flightName = flightName;
 	}
-	public String getFromdept() {
-		return fromdept;
+	public String getFromDept() {
+		return fromDept;
 	}
-	public void setFromdept(String fromdept) {
-		this.fromdept = fromdept;
+	public void setFromDept(String fromDept) {
+		this.fromDept = fromDept;
 	}
-	public String getToarrive() {
-		return toarrive;
+	public String getToArrive() {
+		return toArrive;
 	}
-	public void setToarrive(String toarrive) {
-		this.toarrive = toarrive;
+	public void setToArrive(String toArrive) {
+		this.toArrive = toArrive;
 	}
 	public String getDepart() {
 		return depart;
@@ -68,17 +68,17 @@ public class Admin {
 	public void setArrival(String arrival) {
 		this.arrival = arrival;
 	}
-	public String getFlightecoprice() {
-		return flightecoprice;
+	public String getFlightEcoPrice() {
+		return flightEcoPrice;
 	}
-	public void setFlightecoprice(String flightecoprice) {
-		this.flightecoprice = flightecoprice;
+	public void setFlightEcoPrice(String flightEcoPrice) {
+		this.flightEcoPrice = flightEcoPrice;
 	}
-	public String getFlightbusprice() {
-		return flightbusprice;
+	public String getFlightBusPrice() {
+		return flightBusPrice;
 	}
-	public void setFlightbusprice(String flightbusprice) {
-		this.flightbusprice = flightbusprice;
+	public void setFlightBusPrice(String flightBusPrice) {
+		this.flightBusPrice = flightBusPrice;
 	}
 	public String getDuration() {
 		return duration;
@@ -94,21 +94,21 @@ public class Admin {
 	}
 	@Override
 	public String toString() {
-		return "Admin [flightno=" + flightno + ", flightname=" + flightname + ", fromdept=" + fromdept + ", toarrive="
-				+ toarrive + ", depart=" + depart + ", arrival=" + arrival + ", flightecoprice=" + flightecoprice
-				+ ", flightbusprice=" + flightbusprice + ", duration=" + duration + ", cabin=" + cabin + "]";
+		return "Admin [flightNo=" + flightNo + ", flightName=" + flightName + ", fromDept=" + fromDept + ", toArrive="
+				+ toArrive + ", depart=" + depart + ", arrival=" + arrival + ", flightEcoPrice=" + flightEcoPrice
+				+ ", flightBusPrice=" + flightBusPrice + ", duration=" + duration + ", cabin=" + cabin + "]";
 	}
-	public Admin(String flightno, String flightname, String fromdept, String toarrive, String depart,
-			String arrival, String flightecoprice, String flightbusprice, String duration, String cabin) {
+	public Admin(String flightNo, String flightName, String fromDept, String toArrive, String depart, String arrival,
+			String flightEcoPrice, String flightBusPrice, String duration, String cabin) {
 		super();
-		this.flightno = flightno;
-		this.flightname = flightname;
-		this.fromdept = fromdept;
-		this.toarrive = toarrive;
+		this.flightNo = flightNo;
+		this.flightName = flightName;
+		this.fromDept = fromDept;
+		this.toArrive = toArrive;
 		this.depart = depart;
 		this.arrival = arrival;
-		this.flightecoprice = flightecoprice;
-		this.flightbusprice = flightbusprice;
+		this.flightEcoPrice = flightEcoPrice;
+		this.flightBusPrice = flightBusPrice;
 		this.duration = duration;
 		this.cabin = cabin;
 	}
@@ -116,8 +116,6 @@ public class Admin {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	
 	
 	
 	

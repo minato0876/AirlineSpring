@@ -39,6 +39,7 @@ public class FlightController {
 	@GetMapping("/flightselect/{fromDept}/{toArrive}/{depart}/{arrival}")
 	public List<Flight> searchFlight(@PathVariable("fromDept") String fromDept,@PathVariable("toArrive") String toArrive,@PathVariable("depart") String depart,@PathVariable("arrival") String arrival)
 	{
+		//System.out.println(fromDept +"" +toArrive +"" +depart+"" +arrival);
 		return vService.searchFlight(fromDept, toArrive, depart, arrival);
 	}
 	

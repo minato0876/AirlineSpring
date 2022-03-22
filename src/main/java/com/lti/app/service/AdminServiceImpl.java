@@ -31,10 +31,10 @@ public class AdminServiceImpl implements AdminService{
 
 
 	@Override
-	public boolean deleteVehicle(String flightno) {
+	public boolean deleteFlight(String flightNo) {
 		// TODO Auto-generated method stub
 		
-		return vdao.deleteVehicle(flightno);
+		return vdao.deleteFlight(flightNo);
 	}
 	
 	

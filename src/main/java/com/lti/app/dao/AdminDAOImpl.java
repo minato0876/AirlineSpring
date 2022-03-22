@@ -31,9 +31,9 @@ public class AdminDAOImpl implements AdminDAO {
 	
 
 	@Override
-	public boolean deleteVehicle(String flightno) {
+	public boolean deleteFlight(String flightNo) {
 		
-		Admin obj=eMan.find(Admin.class, flightno);
+		Admin obj=eMan.find(Admin.class, flightNo);
 		eMan.remove(obj);
 		return true;
 	}
