@@ -10,4 +10,7 @@ public interface AdminService {
 	public List<Admin> getFlight();
 	
 	public boolean deleteFlight(String flightNo);
+	
+	public Admin findFlight(String flightNo);
+	public boolean updateFlight(Admin admin);
 }

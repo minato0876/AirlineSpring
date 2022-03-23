@@ -26,6 +26,7 @@ public class FlightController {
 	@GetMapping("/flightselect")
 	public List<Flight> getFlight() 
 	{
+		System.out.println(vService.getFlightSelect());
 		return vService.getFlightSelect();
 	}
 	

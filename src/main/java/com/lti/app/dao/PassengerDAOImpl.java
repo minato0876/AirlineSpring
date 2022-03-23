@@ -28,4 +28,18 @@ public class PassengerDAOImpl implements PassengerDAO{
 		return eMan.createQuery("from Passenger").getResultList();
 	}
 
+	@Override
+	public boolean updateUser(Passenger passenger) {
+		// TODO Auto-generated method stub
+		eMan.merge(passenger);
+		return true;
+	}
+
+	@Override
+	public Passenger findUser(long passengerId) {
+		// TODO Auto-generated method stub
+		Passenger obj=eMan.find(Passenger.class, passengerId);
+		return obj;
+	}
+
 }

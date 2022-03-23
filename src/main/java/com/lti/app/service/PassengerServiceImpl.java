@@ -28,6 +28,18 @@ public class PassengerServiceImpl implements PassengerService {
 		// TODO Auto-generated method stub
 		return vdao.getUser();
 	}
+
+	@Override
+	public boolean updateUser(Passenger passenger) {
+		// TODO Auto-generated method stub
+		return vdao.updateUser(passenger);
+	}
+
+	@Override
+	public Passenger findUser(long passengerId) {
+		// TODO Auto-generated method stub
+		return vdao.findUser(passengerId);
+	}
 	
 
 }

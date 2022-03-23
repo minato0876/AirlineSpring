@@ -37,6 +37,19 @@ public class AdminDAOImpl implements AdminDAO {
 		eMan.remove(obj);
 		return true;
 	}
+
+	@Override
+	public Admin findFlight(String flightNo) {
+		Admin obj=eMan.find(Admin.class, flightNo);
+		return obj;
+	}
+
+	@Override
+	public boolean updateFlight(Admin admin) {
+		// TODO Auto-generated method stub
+		eMan.merge(admin);
+		return true;
+	}
 	
 	
 }

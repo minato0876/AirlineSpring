@@ -36,6 +36,18 @@ public class AdminServiceImpl implements AdminService{
 		
 		return vdao.deleteFlight(flightNo);
 	}
+
+	@Override
+	public Admin findFlight(String flightNo) {
+		// TODO Auto-generated method stub
+		return vdao.findFlight(flightNo);
+	}
+
+	@Override
+	public boolean updateFlight(Admin admin) {
+		// TODO Auto-generated method stub
+		return vdao.updateFlight(admin);
+	}
 	
 	
 	
