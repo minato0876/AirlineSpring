@@ -18,7 +18,7 @@ public class BookingServiceImpl implements BookingService{
 	BookingDAO vdao;
 	
 	@Override
-	public boolean addBooking(Booking book) {
+	public Booking addBooking(Booking book) {
 		// TODO Auto-generated method stub
 		return vdao.addBooking(book);
 	}
@@ -28,5 +28,13 @@ public class BookingServiceImpl implements BookingService{
 		// TODO Auto-generated method stub
 		return vdao.getBooking();
 	}
+
+	@Override
+	public boolean cancelFlight(long pnrNo) {
+		// TODO Auto-generated method stub
+		return vdao.cancelFlight(pnrNo);
+	}
+
+	
 
 }

@@ -17,16 +17,24 @@ public class BookingDAOImpl implements BookingDAO{
 	EntityManager eMan;
 
 	@Override
-	public boolean addBooking(Booking booking) {
+	public Booking addBooking(Booking booking) {
 		// TODO Auto-generated method stub
 		eMan.persist(booking);
-		return true;
+		Booking obj=eMan.find(Booking.class, booking.getPnrNo());
+		return obj;
 	}
 
 	@Override
 	public List<Booking> getBooking() {
 		// TODO Auto-generated method stub
 		return eMan.createQuery("from Booking").getResultList();
+	}
+
+	@Override
+	public boolean cancelFlight(long pnrNo) {
+		Booking obj=eMan.find(Booking.class, pnrNo);
+		eMan.remove(obj);
+		return true;
 	}
 	
 	

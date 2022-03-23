@@ -40,7 +40,7 @@ public class AdminController {
 	public boolean deleteFlight(@PathVariable("flightNo") String flightNo)
 	
 	{
-		System.out.println(flightNo);
+		//System.out.println(flightNo);
 		return vService.deleteFlight(flightNo);
 	}
 }

@@ -40,7 +40,7 @@ public class UserController {
 	public boolean validateLogin(@PathVariable("title")String title,@PathVariable("userName") String userName,@PathVariable("password") String password)
 	{
 		//System.out.println(userName);
-		System.out.println(title);
+		//System.out.println(title);
 		return vService.validateLogin(title,userName, password);
 		
 	}
