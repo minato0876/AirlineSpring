@@ -21,7 +21,6 @@ public class Passenger {
 	private String firstName;
 	@Column(name="lastname")
 	private String lastName;
-	
 	@Column(name="username")
 	private String userName;
 	@Column(name="password")
